@@ -47,7 +47,7 @@ export default function SummaryPage() {
       <div className="mb-8 animate-fade-in">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:bg-gradient-to-r dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 dark:bg-clip-text dark:text-transparent mb-2">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
               AI Summary
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">

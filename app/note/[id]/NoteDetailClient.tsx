@@ -87,7 +87,7 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
     return (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="mb-8 animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:bg-gradient-to-r dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 dark:bg-clip-text dark:text-transparent mb-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
             Edit Note
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Update your note content</p>
@@ -167,7 +167,7 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
       {/* Header with Actions */}
       <div className="mb-6 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 animate-fade-in">
         <div className="flex-1">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:bg-gradient-to-r dark:from-gray-100 dark:via-gray-200 dark:to-gray-100 dark:bg-clip-text dark:text-transparent mb-2 line-clamp-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2 line-clamp-2">
             {note.title}
           </h1>
           <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mt-2">

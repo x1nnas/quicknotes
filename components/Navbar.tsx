@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-white font-bold text-lg">Q</span>
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:bg-gradient-to-r dark:from-gray-100 dark:to-gray-300 dark:bg-clip-text dark:text-transparent">
+            <span className="text-xl font-bold text-gray-900 dark:text-gray-100">
               QuickNotes
             </span>
           </Link>
