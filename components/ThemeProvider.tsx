@@ -30,10 +30,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (!mounted) return
 
     const root = window.document.documentElement
+    console.log('Applying theme:', theme)
     if (theme === 'dark') {
       root.classList.add('dark')
+      console.log('Added dark class')
     } else {
       root.classList.remove('dark')
+      console.log('Removed dark class')
     }
     localStorage.setItem('theme', theme)
   }, [theme, mounted])
