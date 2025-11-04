@@ -44,7 +44,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
 
     setResolvedTheme(effectiveTheme)
-    root.classList.add(effectiveTheme)
+    if (effectiveTheme === 'dark') {
+      root.classList.add('dark')
+    } else {
+      root.classList.remove('dark')
+    }
     localStorage.setItem('theme', theme)
   }, [theme, mounted])
 
@@ -55,10 +59,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = (e: MediaQueryListEvent) => {
       const root = window.document.documentElement
-      root.classList.remove('light', 'dark')
       const newTheme = e.matches ? 'dark' : 'light'
       setResolvedTheme(newTheme)
-      root.classList.add(newTheme)
+      if (newTheme === 'dark') {
+        root.classList.add('dark')
+      } else {
+        root.classList.remove('dark')
+      }
     }
 
     mediaQuery.addEventListener('change', handleChange)
