@@ -98,7 +98,6 @@ npm run db:seed
 
 ## 📚 Next Steps
 
-- Read [LEARNING.md](./LEARNING.md) for detailed explanations
 - Check [README.md](./README.md) for project overview
 - Explore the code to understand how it works!
 

@@ -182,18 +182,6 @@ The Prisma schema is located at `prisma/schema.prisma`. To modify the database s
 2. Run `npm run db:migrate` to create a migration
 3. The migration will be applied automatically
 
-## 📖 Learning Resources
-
-For detailed explanations of how everything works, check out the **[LEARNING.md](./LEARNING.md)** file. It covers:
-
-- Next.js 14 App Router concepts
-- Server Components vs Client Components
-- Prisma ORM setup and usage
-- TypeScript interfaces and types
-- API route handlers
-- Database migrations
-- And much more!
-
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
@@ -216,7 +204,7 @@ The app can be deployed to any platform that supports Next.js:
 
 ## 🤝 Contributing
 
-This is a learning project, but feel free to:
+Feel free to:
 - Report bugs
 - Suggest features
 - Submit pull requests
@@ -234,4 +222,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Made with ❤️ for learning and productivity**
+**Made with ❤️ for productivity**
