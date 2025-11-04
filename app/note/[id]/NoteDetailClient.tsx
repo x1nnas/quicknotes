@@ -95,7 +95,7 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
         
         <form onSubmit={handleUpdate} className="space-y-6 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-gray-200 dark:border-slate-700 p-6 sm:p-8 animate-fade-in">
           <div>
-            <label htmlFor="title" className="block text-sm font-semibold text-gray-700 mb-3">
+            <label htmlFor="title" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
               Title
             </label>
             <input
@@ -103,13 +103,13 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
               id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all bg-gray-50 focus:bg-white text-gray-900"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 transition-all bg-white dark:bg-slate-700/50 focus:bg-white dark:focus:bg-slate-700 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
               required
             />
           </div>
 
           <div>
-            <label htmlFor="content" className="block text-sm font-semibold text-gray-700 mb-3">
+            <label htmlFor="content" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
               Content
             </label>
             <textarea
@@ -117,12 +117,12 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
               value={content}
               onChange={(e) => setContent(e.target.value)}
               rows={16}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none bg-gray-50 focus:bg-white text-gray-900"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 transition-all resize-none bg-white dark:bg-slate-700/50 focus:bg-white dark:focus:bg-slate-700 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
               required
             />
           </div>
 
-          <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-4 border-t border-gray-200">
+          <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-4 border-t border-gray-200 dark:border-slate-700">
             <button
               type="button"
               onClick={() => {
@@ -130,7 +130,7 @@ export default function NoteDetailClient({ note: initialNote }: NoteDetailClient
                 setTitle(note.title)
                 setContent(note.content)
               }}
-              className="px-6 py-3 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50 font-medium transition-all"
+              className="px-6 py-3 border border-gray-300 dark:border-slate-600 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-700 font-medium transition-all"
             >
               Cancel
             </button>
