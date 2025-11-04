@@ -12,25 +12,17 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('dark') // Default to dark
+  // Get initial theme from localStorage or default to dark
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme') as Theme | null
+      return saved || 'dark'
+    }
+    return 'dark'
+  })
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Apply dark mode immediately on mount to prevent flash
-    const root = window.document.documentElement
-    root.classList.add('dark')
-    
-    // Get theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') as Theme | null
-    if (savedTheme) {
-      setThemeState(savedTheme)
-      if (savedTheme === 'dark') {
-        root.classList.add('dark')
-      } else {
-        root.classList.remove('dark')
-      }
-    }
-    
     setMounted(true)
   }, [])
 

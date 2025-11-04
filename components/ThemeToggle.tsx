@@ -6,7 +6,9 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    console.log('Toggling theme from', theme, 'to', newTheme)
+    setTheme(newTheme)
   }
 
   const getIcon = () => {
